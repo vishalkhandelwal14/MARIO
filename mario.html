@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>mario</title>
+</head>
+<style>
+.racebg{
+	width:100%;
+	height:100vh;
+	background-image:url(images/gg.png);
+	background-size:100% 100%;
+}
+*{
+	margin:0;
+	padding:0;
+}
+#mario img{
+	position:absolute;
+	bottom:170px;
+	animation-name:mariorun;
+	animation-duration:0s;
+	animation-iteration-count:1;
+	
+}
+@keyframes mariorun{
+ 0%{left:0%;}
+ 50{left:40%;}
+ 100%{left:88%;}
+}
+#batman img{
+	position:absolute;
+	bottom:45px;
+	animation-name:mariorun;
+	animation-duration:0s;
+	animation-iteration-count:1;
+	}
+	
+	
+@keyframes mariorun{
+ 0%{left:0%;}
+ 50{left:40%;}
+ 100%{left:88%;}
+}
+
+h2{
+	color:red;
+	text-transform:uppercase;
+	font-size:32px;
+	font-family:sans-serif;
+	letter-spacing:2px;
+	position:absolute;
+	top:20%;
+	left:40%;
+	animation: mariotext 5s linear;
+	animation-iteration-count:infinite;
+	animation-delay:0s;
+	
+}
+	
+	@keyframes mariotext{
+		0%{font-size:32px;}
+	
+		100%{font-size:60px; left:25%;}
+	}
+
+</style>
+<body>
+<div class="racebg">
+<div id="mario">
+<img id="race1" src="images/QGo5isT.gif" width="150px" />
+</div>
+<div id="batman">
+<img id="race2" src="images/giphy.gif" width="250px" height="200px" />
+<h2>RUN RUN RUN!!</h2>
+<script>
+	var x=Math.floor((Math.random() * 4) + 9);
+	var y=Math.floor((Math.random() * 4) + 9);
+	document.getElementById('race1').style.animationDuration=x+'s';
+	document.getElementById('race2').style.animationDuration=y+'s';
+</script>
+</div>
+</div>
+
+
+</body>
+
+</html>
